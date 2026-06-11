@@ -67,10 +67,7 @@ const SHEET_URL = "https://script.google.com/macros/s/AKfycbzDFoDbP36X7seHdzoK-S
 function saveData(name){
     fetch(SHEET_URL,{
         method:"POST",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body: JSON.stringify({
+        body: new URLSearchParams({
             name: name
         })
     });
