@@ -62,14 +62,12 @@ Did You Come From Kite's YT link?
 </div>
 
 <script>
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbzDFoDbP36X7seHdzoK-Sf-6RjKrBIlDViWYnG34IUBQnSZCRcCUSXh_tu6ClFIqzc/exec";
+onst SHEET_URL = "https://script.google.com/macros/s/AKfycbzDFoDbP36X7seHdzoK-Sf-6RjKrBIlDViWYnG34IUBQnSZCRcCUSXh_tu6ClFIqzc/exec";
 
-function saveData(name){
+function send(name){
     fetch(SHEET_URL,{
         method:"POST",
-        body: new URLSearchParams({
-            name: name
-        })
+        body: new URLSearchParams({ name: name })
     });
 }
 
