@@ -200,16 +200,20 @@ function jokeReveal(){
 }
 </script>
 
-function sendData(name, info) {
+
+function submitName() {
+  let name = document.getElementById("name").value;
+
   fetch("https://script.google.com/macros/s/AKfycbzW58o7emgChaXmot9jBxFoILgHPS86uMzfsyWcxm4BjVTpXtfY_Yo5ESx1o9XnzPbt/exec", {
     method: "POST",
     body: JSON.stringify({
       name: name,
-      info: info
+      info: "Visited site"
     })
   });
 }
 </script>
+
 
 </body>
 </html>
