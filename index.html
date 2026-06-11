@@ -67,7 +67,12 @@ onst SHEET_URL = "https://script.google.com/macros/s/AKfycbzDFoDbP36X7seHdzoK-Sf
 function send(name){
     fetch(SHEET_URL,{
         method:"POST",
-        body: new URLSearchParams({ name: name })
+         headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: name
+        })
     });
 }
 
